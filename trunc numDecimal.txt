@@ -1,0 +1,14 @@
+ Scanner teclado = new Scanner(System.in);
+
+        System.out.println("ingrese un numero");
+        double num = teclado.nextDouble();
+
+        System.out.println("el doble de numero es " + Math.round(num * 2));
+        System.out.println("el triple del numero es " + Math.round(num * 3));
+//        System.out.println("la raiz cudrada del numero es " + (Math.sqrt(num)));
+
+       if((Math.sqrt(num))%1 == 0.0 ){
+           System.out.println("la raiz caudrada es " +(Math.round(Math.sqrt(num))));
+       }
+        else{
+            System.out.println("la raiz caudrada es "+Math.round(Math.sqrt(num)*100.0)/100.0);

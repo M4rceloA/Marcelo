@@ -1,0 +1,14 @@
+public static void borrarPantalla(){
+		System.out.println();
+		System.out.println("Presion enter para continuar: ");
+		new java.util.Scanner(System.in).nextLine();
+		
+		try {
+			Robot limpiar = new Robot();
+			limpiar.keyPress(KeyEvent.VK_CONTROL);
+			limpiar.keyPress(KeyEvent.VK_L);
+			limpiar.keyRelease(KeyEvent.VK_CONTROL);
+			limpiar.keyRelease(KeyEvent.VK_L);
+		} catch (Exception e) {
+			System.out.println("No importa ahora");
+		}

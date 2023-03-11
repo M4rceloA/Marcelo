@@ -1,0 +1,20 @@
+ Scanner teclado = new Scanner(System.in);
+
+        System.out.println("ingrese nota");
+        int nota = teclado.nextInt();
+
+        if (nota >= 0 && nota <= 10) {
+            System.out.println("la nota es correcta " + nota);
+        } 
+        else {
+        }
+            while (nota < 0 || nota > 10) {
+            System.out.println("ingrese una nota valida");
+            nota = teclado.nextInt();
+
+            if (nota >= 0 && nota <= 10) {
+                System.out.println("la nota es correcta " + nota);
+            } 
+            else {
+            }
+            }

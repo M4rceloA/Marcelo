@@ -1,0 +1,19 @@
+ Scanner teclado = new Scanner(System.in);
+        int cont = 0;
+        int suma = 0;
+        int num = 0;
+        do {
+            System.out.println("ingrese un numero");
+            num = teclado.nextInt();
+            cont = cont + 1;
+            if (num > 0) {
+
+                suma = suma + num;
+            }
+            if (num == 0) {
+                break;
+            }
+
+        } while (cont <=19);
+
+        System.out.println("la suma de los numero es " + suma);

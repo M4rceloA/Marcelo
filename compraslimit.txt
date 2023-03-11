@@ -1,0 +1,23 @@
+  Scanner teclado = new Scanner(System.in);
+        int i=0;
+        int suma=0;
+        System.out.println("ingrese el limite");
+        int limit = teclado.nextInt();
+        
+        
+        while (suma<=limit){
+            System.out.println("ingrese un numero");
+            int numero=teclado.nextInt();
+            
+            if(suma==0){
+                suma=numero;
+            }
+            else {
+                suma=suma+numero;
+            }
+//            if(suma>=limit){
+//                break;
+//            }
+        }
+        System.out.println("a alcanzado el limite , la suma es "+suma);
+           }

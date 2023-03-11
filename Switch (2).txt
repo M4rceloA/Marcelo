@@ -1,0 +1,91 @@
+  Scanner leer = new Scanner(System.in);
+
+		System.out.println("Ingrese el primer numero: ");
+
+		int num1 = leer.nextInt();
+
+		System.out.println("Ingrese el segundo numero: ");
+
+		int num2 = leer.nextInt();
+
+		boolean ok = true;
+		
+		String letra;
+
+		while (ok) {
+
+			System.out.println("Menu");
+			System.out.println("1 - Sumar");
+			System.out.println("2 - Restar");
+			System.out.println("3 - Multiplicar");
+			System.out.println("4 - Dividir");
+			System.out.println("5 - Salir");
+
+			int key = 0;
+
+			while (key > 5 || key < 1) {
+				System.out.println("");
+				System.out.println("Digite la opcion deseada: ");
+				key = leer.nextInt();
+			}
+
+			switch (key) {
+			case 1: {
+                                
+				System.out.println("la suma de los numeros es "+(num1 + num2));
+				System.out.println("Presion enter para continuar: ");
+				new java.util.Scanner(System.in).nextLine();
+
+				break;
+			}
+			case 2: {
+
+				System.out.println("la resta de los numeros es "+(num1 - num2));
+				System.out.println("Presion enter para continuar: ");
+				new java.util.Scanner(System.in).nextLine();
+
+				break;
+			}
+			case 3: {
+
+				System.out.println("la mutiplicación de los numeros es "+(num1 * num2));
+				System.out.println("Presion enter para continuar: ");
+				new java.util.Scanner(System.in).nextLine();
+
+				break;
+			}
+			case 4: {
+
+				System.out.println("l division de los numeros es "+(num1 / num2));
+				System.out.println("Presion enter para continuar: ");
+				new java.util.Scanner(System.in).nextLine();
+
+				break;
+			}
+			case 5: {
+
+				System.out.println("Desea salir del programa? Digite S/s para sí: ");
+
+				letra = new java.util.Scanner(System.in).nextLine();
+
+				if (letra.toUpperCase().equals("S")) {
+					ok = false;
+					break;
+				} else {
+					break;
+				}
+				
+			}
+
+			default: {
+				System.out.println("Ingreso un valor no valido.");
+				System.out.println("Presion enter para continuar: ");
+				new java.util.Scanner(System.in).nextLine();
+				
+				break;
+			}
+			}
+
+		}
+		
+		System.out.println("Usted salio del programa...");

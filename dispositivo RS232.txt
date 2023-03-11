@@ -1,0 +1,27 @@
+Scanner teclado = new Scanner(System.in);
+
+        String cadena = null;
+        int contI = 0;
+        int contC = 0;
+
+        System.out.println(" dispositivo RS232");
+        System.out.println("");
+
+        do {
+            System.out.println("ingrese cadena, para finalizar ingrese &&&&&");
+            cadena = teclado.next();
+            int lar = cadena.length();
+            if (cadena.equals("&&&&&")) {
+                break;
+            }
+            if (lar > 0 && lar <= 5 && cadena.charAt(0) == 'X' && cadena.charAt(cadena.length() - 1) == 'O') {
+                contC = contC + 1;
+            } else {
+
+                contI = contI + 1;
+            }
+
+        } while (!"&&&&&".equals(cadena));
+
+        System.out.println("los mensajes correctos son " + contC);
+        System.out.println("los mensajes incorrectos son " + contI);
