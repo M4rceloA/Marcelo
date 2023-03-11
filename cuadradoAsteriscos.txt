@@ -1,0 +1,20 @@
+Scanner teclado = new Scanner(System.in);
+        System.out.println("ingrese tamaño de lado");
+        int tam = teclado.nextInt();
+
+        for (int i = 0; i < tam; i++) {
+            for (int j = 0; j < tam; j++) {
+
+                if (i ==0 || i == tam - 1) {
+                    System.out.print("*");
+                    
+                } else if (j == 0 || j == tam - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println("");
+        }
+        System.out.println("");
