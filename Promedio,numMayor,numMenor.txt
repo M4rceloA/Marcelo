@@ -1,0 +1,36 @@
+ Scanner teclado = new Scanner(System.in);
+        boolean ok = false;
+        
+        System.out.println("ingrese cantidad de numeros");
+        double cant = teclado.nextInt();
+        double nummenor = 0;
+        double nummayor = 0;
+        double promedio=0;
+         int cont = 0;
+         double sumatotal=0;
+        while (!ok) {
+            System.out.println("ingrese un numero ");
+            int num = teclado.nextInt();
+            sumatotal=sumatotal+num;
+            if (cont == 0) {
+                nummenor = num;
+                nummayor = num;
+                
+            } else if (nummenor > num) {
+                nummenor = num;
+            } else if (nummayor < num) {
+                nummayor=num;
+            }
+            cont=+1;
+            
+          
+            System.out.println("desea continuar?s/n");
+            String resp=teclado.next();
+            if(resp.equals("n")){
+            break;
+            }
+        }
+         promedio=sumatotal/cant;
+        System.out.println("el numero menor es "+(Math.round(nummenor)));
+        System.out.println("el numero mayor es "+(Math.round(nummayor)));
+        System.out.println("el promedio de los numero es "+promedio);

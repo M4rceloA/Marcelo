@@ -1,0 +1,13 @@
+Scanner teclado = new Scanner(System.in);
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("ingrese minutos");
+        int minutos = teclado.nextInt();
+        
+        int hora = minutos/60;
+        int dia = hora/24;
+	
+	hora=hora % 24;
+        
+       System.out.println(minutos + " minutos equivalen a " + dia + " día(s) y " + hora + " hora(s).");

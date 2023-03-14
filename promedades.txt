@@ -1,0 +1,27 @@
+ Scanner teclado = new Scanner(System.in);
+        int contm = 0;
+
+        double promediom = 0.0;
+        double promediog = 0.0;
+
+        System.out.println("ingrese cantidad de personas ");
+        int cant = teclado.nextInt();
+        for (int i = 0; i < cant; i++) {
+            System.out.println("ingrese altura");
+            double altura = teclado.nextDouble();
+
+            promediog = +altura;
+
+            if (altura < 1.60) {
+                
+                promediom = +altura;
+                contm = contm + 1;
+                
+            }
+
+        }
+        promediog = promediog / cant;
+        promediom = promediom / contm;
+
+        System.out.println("el promedio de altura en general es " + promediog);
+        System.out.println("el promedio de alturas menor a 1,60m es " + promediom);

@@ -1,0 +1,29 @@
+Scanner teclado = new Scanner(System.in);
+         System.out.println("ingrese numero A");
+        int A=teclado.nextInt();
+        System.out.println("ingrese numero B");
+        int B=teclado.nextInt();
+        System.out.println("ingrese numero C");
+        int C=teclado.nextInt();
+        System.out.println("ingrese numero D");
+        int D=teclado.nextInt();
+       
+        int aux;
+        
+        System.out.println("A="+A);
+        System.out.println("B="+B);
+        System.out.println("C="+C);
+        System.out.println("D="+D);
+        System.out.println("");
+        
+       aux=B;
+       B=C;
+       C=A;
+       A=D;
+       D=aux;
+       
+        System.out.println("los numeros acomodados son");
+       System.out.println("A="+A);
+        System.out.println("B="+B);
+        System.out.println("C="+C);
+        System.out.println("D="+D);
