@@ -1,0 +1,11 @@
+  String[] vector = new String[5];
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("ingrese un nombre");
+            vector[i]=teclado.next();
+            
+        }
+        
+            System.out.println("EL VECTOR ES ");
+            System.out.println(Arrays.toString(vector));
+            

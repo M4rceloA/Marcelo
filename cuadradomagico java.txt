@@ -1,0 +1,45 @@
+   Scanner teclado = new Scanner(System.in);
+        int sumaf0 = 0, sumaf1 = 0, sumaf2 = 0;
+        int sumac0 = 0, sumac1 = 0, sumac2 = 0;
+        int d1 = 0;
+        int d2 = 0;
+        int[][] matriz = new int[3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                 System.out.println("ingrese numero de fila " + i + " columa "+ j +" entre 1 y 9 ");
+                matriz[i][j] = teclado.nextInt();
+                if (matriz[i][j] < 1 || matriz[i][j] > 9) {
+                    System.out.println("INGRESE NUMERO VALIDO");
+                    matriz[i][j] = teclado.nextInt();
+                }
+            }
+
+        }
+        for (int j = 0; j < 3; j++) {
+            sumaf0 = sumaf0 + matriz[j][0];
+            sumaf1 = sumaf1 + matriz[j][1];
+            sumaf2 = sumaf2 + matriz[j][2];
+        }
+        for (int i = 0; i < 3; i++) {
+            sumac0 = sumac0 + matriz[0][i];
+            sumac1 = sumac1 + matriz[1][i];
+            sumac2 = sumac2 + matriz[2][i];
+        }
+        d1 = matriz[0][0] + matriz[1][1] + matriz[2][2];
+        d2 = matriz[2][0] + matriz[1][1] + matriz[0][2];
+
+        if (sumaf0 == sumaf1 && sumaf1 == sumaf2 && sumac0 == sumac1 && sumac1 == sumac2 && d1 == d2) {
+            System.out.println("ES magico");
+        } else {
+            System.out.println("NO es magico");
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+
+                System.out.print("[" + matriz[i][j] + "]");
+
+            }
+            System.out.println("");
+        }
