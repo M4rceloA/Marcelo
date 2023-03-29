@@ -1,0 +1,26 @@
+ Scanner teclado = new Scanner(System.in);
+        Random aleatorio = new Random();
+        int[] vector = new int[5];
+        int digitos = 0;
+        int n = 0;
+        boolean ok = false;
+
+        for (int i = 0; i < 5; i++) {
+            vector[i] = aleatorio.nextInt(99999);
+            n = vector[i];
+
+            while (n != 0) {
+
+                n = n / 10;
+                digitos = digitos + 1;
+
+            }
+            System.out.println("las cifras son " + digitos + " [" + vector[i] + "]");
+            if (n == 0) {
+                digitos = 0;
+            }
+        }
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("[" + vector[i] + "]");
+        }
